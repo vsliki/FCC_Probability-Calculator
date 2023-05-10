@@ -21,11 +21,12 @@ The Hat class should have a draw method that accepts an argument indicating the 
 Next, create an experiment function in prob_calculator.py (not inside the Hat class). This function should accept the following arguments:
 
 
-
-hat: A hat object containing balls that should be copied inside the function.
-expected_balls: An object indicating the exact group of balls to attempt to draw from the hat for the experiment. For example, to determine the probability of drawing 2 blue balls and 1 red ball from the hat, set expected_balls to {"blue":2, "red":1}.
-num_balls_drawn: The number of balls to draw out of the hat in each experiment.
-num_experiments: The number of experiments to perform. (The more experiments performed, the more accurate the approximate probability will be.)
+```
+- hat: A hat object containing balls that should be copied inside the function.
+- expected_balls: An object indicating the exact group of balls to attempt to draw from the hat for the experiment. For example, to determine the probability of drawing 2 blue balls and 1 red ball from the hat, set expected_balls to {"blue":2, "red":1}.
+- num_balls_drawn: The number of balls to draw out of the hat in each experiment.
+- num_experiments: The number of experiments to perform. (The more experiments performed, the more accurate the approximate probability will be.)
+```
 The experiment function should return a probability.
 
 For example, if you want to determine the probability of getting at least two red balls and one green ball when you draw five balls from a hat containing six black, four red, and three green. To do this, you will perform N experiments, count how many times M you get at least two red balls and one green ball, and estimate the probability as M/N. Each experiment consists of starting with a hat containing the specified balls, drawing several balls, and checking if you got the balls you were attempting to draw.
@@ -35,37 +36,6 @@ For example, if you want to determine the probability of getting at least two re
 
 
 
-
-
-The function should add the duration time to the start time and return the result.
-
-- If the result will be the next day, it should show (next day) after the time. If the result will be more than one day later, it should show (n days later) after the time, where "n" is the number of days later.
-
-- If the function is given the optional starting day of the week parameter, then the output should display the day of the week of the result. The day of the week in the output should appear after the time and before the number of days later.
-
-Below are some examples of different cases the function should handle. Pay close attention to the spacing and punctuation of the results.
-
-```
-add_time("3:00 PM", "3:10")
-# Returns: 6:10 PM
-
-add_time("11:30 AM", "2:32", "Monday")
-# Returns: 2:02 PM, Monday
-
-add_time("11:43 AM", "00:20")
-# Returns: 12:03 PM
-
-add_time("10:10 PM", "3:30")
-# Returns: 1:40 AM (next day)
-
-add_time("11:43 PM", "24:20", "tueSday")
-# Returns: 12:03 AM, Thursday (2 days later)
-
-add_time("6:30 PM", "205:12")
-# Returns: 7:42 AM (9 days later)
-```
-
-Do not import any Python libraries. Assume that the start times are valid times. The minutes in the duration time will be a whole number less than 60, but the hour can be any whole number.
 
 
 
